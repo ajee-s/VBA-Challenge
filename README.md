@@ -3,7 +3,7 @@ NU Data Science Module2 VBA Homework
   
   Go to file * [Stock Data](Resources/Multiple_year_stock_data.xlsx) 
 
-On this data set Run https://github.com/ajee-s/VBA-Challenge/blob/main/StockMultipleYearsHomework
+On this data set Run (https://github.com/ajee-s/VBA-Challenge/blob/main/StockMultipleYearsHomework.vbs)
 
 output will provide below info for each pf the tabs 2018, 2019 and 2020
 
