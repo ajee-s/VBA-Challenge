@@ -14,7 +14,7 @@ output will provide below info for each pf the tabs 2018, 2019 and 2020
   
    For Bonus run the below script on the same data set 
  
- https://github.com/ajee-s/VBA-Challenge/blob/main/StocksHomeworkBonus
+ https://github.com/ajee-s/VBA-Challenge/blob/main/StockMultipleYearsHomework.vbs
   
  Answer images
  
