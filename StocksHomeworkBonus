@@ -1,0 +1,50 @@
+Sub Greatest()
+Dim greatestpercentinc As Double
+Dim greatestpercentdec As Double
+Dim greatestvol As Double
+Dim x As Long
+Dim y As Long
+
+For Each ws In Worksheets
+
+    greatestpercentinc = Application.WorksheetFunction.Max(ws.Range("K2:K4000"))
+    
+    greatestpercentdec = Application.WorksheetFunction.Min(ws.Range("K2:K4000"))
+    
+    greatestvol = Application.WorksheetFunction.Max(ws.Range("L2:L4000"))
+    lastrow = ws.Cells(Rows.count, 1).End(xlUp).Row
+
+
+    For x = 2 To lastrow
+        If ws.Cells(x, 12).Value = greatestvol Then
+        ws.Cells(3, 17).Value = ws.Cells(x, 12).Value
+        ws.Cells(3, 16).Value = ws.Cells(x, 9).Value
+        ws.Cells(3, 15).Value = "Greatest Stock Volume"
+        ws.Cells(3, 16).NumberFormat = "000,000,000,000,000,000"
+                
+              
+              Exit For
+        End If
+            
+    
+    Next x
+   
+    For y = 2 To lastrow
+        
+            If ws.Cells(y, 11).Value = greatestpercentinc Then
+            ws.Cells(1, 16).Value = ws.Cells(y, 9).Value
+            ws.Cells(1, 17).Value = greatestpercentinc
+            ws.Cells(1, 17).NumberFormat = "0.00%"
+            ws.Cells(1, 15).Value = "Greatest % Increase"
+                ElseIf ws.Cells(y, 11).Value = greatestpercentdec Then
+               ws.Cells(2, 17).Value = ws.Cells(y, 11).Value
+               ws.Cells(2, 16).Value = ws.Cells(y, 9).Value
+               ws.Cells(2, 17).NumberFormat = "0.00%"
+               ws.Cells(2, 15).Value = "Greatest % Decrease"
+               
+                   End If
+               'Exit For
+    
+    Next y
+ Next ws
+End Sub
